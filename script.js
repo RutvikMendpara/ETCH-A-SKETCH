@@ -13,9 +13,9 @@ let y = 16;
 let color = "blue";
 gridBtn.addEventListener("click", () => {
   resetDiv();
-  x = Number(prompt("Enter x (between 0 to 20)"));
-  y = Number(prompt("Enter y (between 0 to 20)"));
-  if (x > 20 || y > 20 || x === 0 || y === 0) {
+  x = Number(prompt("Enter x (between 1 to 32)"));
+  y = Number(prompt("Enter y (between 1 to 32)"));
+  if (x > 32 || y > 32 || x === 0 || y === 0) {
     alert("Your number is not valid");
     return;
   }
@@ -28,6 +28,7 @@ const createDiv = () => {
     container.append(el);
     el.classList.add("div-grid");
   }
+  container.style.gridTemplateColumns = `repeat(${x}, 20px)`;
   //mouseenter
   const div = document.querySelectorAll(".div-grid");
   for (let d of div) {

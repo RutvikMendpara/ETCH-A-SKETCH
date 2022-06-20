@@ -4,7 +4,9 @@
 }
 .container-div {
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(16, 20px);
   gap: 0;
 }
 .div-grid {
