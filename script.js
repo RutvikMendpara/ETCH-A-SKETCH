@@ -1,5 +1,6 @@
 const container = document.getElementById("container");
 const gridBtn = document.getElementById("gridBtn");
+const reset = document.getElementById("reset");
 const Green = document.getElementById("Green");
 const Blue = document.getElementById("Blue");
 const Red = document.getElementById("Red");
@@ -14,14 +15,7 @@ gridBtn.addEventListener("click", () => {
   resetDiv();
   x = Number(prompt("Enter x (between 0 to 20)"));
   y = Number(prompt("Enter y (between 0 to 20)"));
-  if (
-    x > 20 ||
-    y > 20 ||
-    x === 0 ||
-    y === 0 ||
-    typeof x === "number" ||
-    typeof y === "number"
-  ) {
+  if (x > 20 || y > 20 || x === 0 || y === 0) {
     alert("Your number is not valid");
     return;
   }
@@ -76,4 +70,11 @@ Random.addEventListener("click", () => {
   let num2 = Math.floor(Math.random() * 255 + 1);
   let num3 = Math.floor(Math.random() * 255 + 1);
   color = `rgb(${num1},${num2},${num3})`;
+});
+
+reset.addEventListener("click", () => {
+  const div = document.querySelectorAll(".div-grid");
+  for (let d of div) {
+    d.style.backgroundColor = "white";
+  }
 });
