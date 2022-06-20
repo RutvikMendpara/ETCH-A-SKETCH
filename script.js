@@ -6,6 +6,7 @@ const Blue = document.getElementById("Blue");
 const Red = document.getElementById("Red");
 const Yellow = document.getElementById("Yellow");
 const White = document.getElementById("White");
+const Black = document.getElementById("Black");
 const Random = document.getElementById("Random");
 
 let x = 16;
@@ -66,6 +67,9 @@ Yellow.addEventListener("click", () => {
 White.addEventListener("click", () => {
   color = "White";
 });
+Black.addEventListener("click", () => {
+  color = "#212529";
+});
 Random.addEventListener("click", () => {
   let num1 = Math.floor(Math.random() * 255 + 1);
   let num2 = Math.floor(Math.random() * 255 + 1);
@@ -76,6 +80,6 @@ Random.addEventListener("click", () => {
 reset.addEventListener("click", () => {
   const div = document.querySelectorAll(".div-grid");
   for (let d of div) {
-    d.style.backgroundColor = "white";
+    d.style.backgroundColor = "#212529";
   }
 });
